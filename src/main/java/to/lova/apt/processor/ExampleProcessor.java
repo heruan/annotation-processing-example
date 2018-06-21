@@ -38,7 +38,7 @@ public class ExampleProcessor extends CodeModelProcessorBase {
                 .getElementsAnnotatedWith(ExampleAnnotation.class)) {
 
             JDefinedClass definedClass = codeModel
-                    ._class("to.lova.apt.MyGeneratedClass");
+                    ._class(element.getSimpleName().toString() + "_");
 
             definedClass.field(JMod.PUBLIC | JMod.FINAL, String.class, "foo");
 
